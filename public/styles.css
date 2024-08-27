@@ -1,0 +1,182 @@
+/* Estilos básicos para el cuerpo de la página */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fondo oscuro para un estilo futurista */
+    color: #e0e0e0; /* Texto claro para buen contraste */
+    line-height: 1.6;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00bcd4; /* Línea de color cian para acento */
+}
+
+/* Estilos para el logo */
+#logo {
+    max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción del logo */
+    max-height: 200px; /* Ajusta la altura máxima del logo */
+    display: block;
+    margin: 0 auto; /* Centra el logo horizontalmente */
+}
+
+/* Estilos para los enlaces de navegación en el encabezado */
+nav a {
+    color: #ffffff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav a:hover {
+    color: #00bcd4; /* Color de texto en hover */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #00bcd4; /* Línea de acento debajo del enlace */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Estilos para el área principal de la página */
+main {
+    padding: 30px;
+    background-color: #1e1e1e; /* Fondo oscuro para el contenido principal */
+    border-radius: 12px; /* Bordes más redondeados para un look más moderno */
+    max-width: 900px; /* Ancho máximo aumentado para más espacio */
+    margin: 30px auto; /* Centrando el contenedor principal */
+    color: #e0e0e0; /* Texto claro en la sección principal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para destacar */
+}
+
+/* Estilos para el banner de publicidad */
+.banner {
+    background: linear-gradient(135deg, #ff4081, #00bcd4); /* Gradiente colorido */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #00bcd4;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el banner */
+}
+
+/* Ocultar el banner en otras secciones */
+.hidden {
+    display: none;
+}
+
+/* Estilos para los formularios y elementos dentro de ellos */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio aumentado entre los elementos del formulario */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #333;
+    color: #e0e0e0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+}
+
+/* Estilos para los botones */
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0097a7;
+    transform: scale(1.05);
+}
+
+/* Estilos específicos para el contenedor de la información del vehículo */
+#vehicleInfo {
+    margin-top: 30px;
+}
+
+/* Estilos para el cambio de tema oscuro */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme header {
+    background-color: #1e1e1e;
+}
+
+body.dark-theme nav a {
+    color: #e0e0e0;
+}
+
+body.dark-theme main {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-theme input, 
+body.dark-theme select {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+body.dark-theme button {
+    background-color: #00bcd4;
+}
+
+body.dark-theme button:hover {
+    background-color: #0097a7;
+}
+
+body.dark-theme label {
+    color: #e0e0e0;
+}
+
+body.dark-theme #vehicleInfo {
+    color: #e0e0e0;
+}
